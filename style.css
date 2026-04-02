@@ -1,0 +1,67 @@
+body{
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content:center;
+    align-items: center;
+    backdrop-filter: blur(40px);
+    background-color: #1f2937;
+    margin: 0;
+    height: 100vh;
+}
+
+.container{
+    display:flex;
+    flex-flow:column wrap;
+    align-items: center;
+    background:#6366f1;
+    border:2px solid black;
+    border-radius:20px;
+    align-self: center;
+    padding:24px;
+}
+
+.title{
+    color:#F9FAF8;
+    font-size:42px;
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+.the_game{
+    margin:12px;
+    display: flex;
+    flex-flow:row wrap;
+}
+
+.choice{
+    display: flex;
+    flex-flow:column wrap;
+    align-items: center;
+}
+
+.choice_img{
+    height:200px;
+    width:200px;
+}
+
+#Rock_Button , #Paper_Button , #Scissor_Button{
+    margin:4px;
+    background:#4f46e5;
+    font-size:20px;
+    border-radius: 8px;
+    color:#F9FAF8;
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+.scores{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    gap:24px;
+}
+
+#Human_Score, #Computer_Score{
+    font-size:32px;
+    color:#F9FAF8;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-weight:bold;
+}

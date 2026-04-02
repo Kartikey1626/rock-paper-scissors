@@ -21,28 +21,15 @@ function GetComputerChoice() {
     }
 }
 
-function GetHumanChoice()
-{
-    let a = prompt("Rock,Paper or Scissor")
-    if(typeof a==="string")
-    {
-        a=a.toLowerCase();
-        a=a.trim();
-        return(a);
-    }
-    else
-    {
-        console.log("invalid input type");
-    }
-};
 
 let HumanScore=0;
 let ComputerScore=0;
 
-function Rock_Paper_Scissor()
+const Human_Score = document.getElementById("Human_Score");
+const Computer_Score = document.getElementById("Computer_Score");
+
+function Rock_Paper_Scissor(ComputerChoice,HumanChoice)
 {
-    let HumanChoice=GetHumanChoice();
-    let ComputerChoice=GetComputerChoice();
 
     if(ComputerChoice==HumanChoice)
     {
@@ -74,16 +61,25 @@ function Rock_Paper_Scissor()
             HumanScore++;
         }
     }
+
+    Human_Score.textContent="Human-Score:"+String(HumanScore);
+    Computer_Score.textContent="Computer-Score:"+String(ComputerScore); 
 }
 
-function PlayGame()
-{
-    Rock_Paper_Scissor();
-    Rock_Paper_Scissor();
-    Rock_Paper_Scissor();
-    Rock_Paper_Scissor();
-    Rock_Paper_Scissor();
-}
+const Rock_Button=document.getElementById("Rock_Button");
+const Paper_Button=document.getElementById("Paper_Button");
+const Scissor_Button=document.getElementById("Scissor_Button");
 
-PlayGame();
+
+Rock_Button.addEventListener("click",() =>{
+    Rock_Paper_Scissor(GetComputerChoice(),"rock");
+})
+
+Scissor_Button.addEventListener("click",() =>{
+    Rock_Paper_Scissor(GetComputerChoice(),"scissor");
+})
+
+Paper_Button.addEventListener("click",()=>{
+    Rock_Paper_Scissor(GetComputerChoice(),"paper");
+})
 

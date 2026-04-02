@@ -3,10 +3,34 @@
     <head >
         <meta charset="UTF-8">
         <script defer src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
         <title>Rock-Paper-Scissor</title>
     </head>
 
-    <body style="background-color: #1f2937; margin:0;">
+    <body>
+        <div class="container">
+            <h1 class="title">ROCK-PAPER-SCISSOR</h1>
+            <div class="the_game">
+                <div class="choice">
+                    <img class="choice_img" src="images/rock.png">
+                    <button id="Rock_Button">Rock</button>
+                </div>
 
+                <div class="choice">
+                    <img class="choice_img" src="images/paper.png">
+                    <button id="Paper_Button">Paper</button>
+                </div>
+
+                <div class="choice">
+                    <img class="choice_img" src="images/scissor.png">
+                    <button id="Scissor_Button">Scissor</button>
+                </div>
+            </div>
+
+            <div class="scores">
+                <p id="Human_Score">Human-Score:</p>
+                <p id="Computer_Score">Computer-Score:</p>
+            </div>
+        </div>
     </body>
 </html>
